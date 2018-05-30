@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 
 namespace DTO
 {
@@ -22,6 +23,15 @@ namespace DTO
             this.NienKhoa = NienKhoa;
             this.SiSo = SiSo;
             this.GiaoVienChuNhiem = GiaoVienChuNhiem;
+        }
+
+        public Lop(DataRow row)
+        {
+            this.MaLop = row["MaLop"].ToString();
+            this.TenLop = row["TenLop"].ToString();
+            this.NienKhoa = row["NienKhoa"].ToString();
+            this.SiSo = Int32.Parse(row["SiSo"].ToString());
+            this.GiaoVienChuNhiem = row["GiaoVienChuNhiem"].ToString();
         }
 
     }

@@ -20,10 +20,10 @@ namespace DTL
         }
 
         //Trả về dữ liệu trong bảng MonHoc theo mã môn học.
-        public DataTable Get(string MaMonHoc) {
-            string query = "select * from MonHoc where MaMonHoc = @MaMonHoc";
+        public DataTable Get(string maMonHoc) {
+            string query = "select * from MonHoc where MaMon = @MaMonHoc";
             SqlCommand cmd = new SqlCommand(query);
-            cmd.Parameters.AddWithValue("@MaMonHoc", MaMonHoc);
+            cmd.Parameters.AddWithValue("@MaMonHoc", maMonHoc);
             return csdl.ExecuteQuery(cmd);
         }
 
@@ -33,6 +33,23 @@ namespace DTL
             cmd.Parameters.AddWithValue("@MaMonHoc", mh.MaMon);
             cmd.Parameters.AddWithValue("@TenMonHoc", mh.TenMon);
             cmd.Parameters.AddWithValue("@SoTiet", mh.SoTiet);
+            return csdl.ExecuteNonQuery(cmd);
+        }
+
+        public int Update(MonHoc mh) {
+            string query = "update MonHoc set TenMon = @TenMonHoc, SoTiet= @SoTiet where MaMon= @MaMonHoc";
+            SqlCommand cmd = new SqlCommand(query);
+            cmd.Parameters.AddWithValue("@MaMonHoc", mh.MaMon);
+            cmd.Parameters.AddWithValue("@TenMonHoc", mh.TenMon);
+            cmd.Parameters.AddWithValue("@SoTiet", mh.SoTiet);
+            return csdl.ExecuteNonQuery(cmd);   
+        }
+
+        public int Delete(string maMonHoc)
+        {
+            string query = "delete from MonHoc where MaMon = @MaMonHoc";
+            SqlCommand cmd = new SqlCommand(query);
+            cmd.Parameters.AddWithValue("@MaMonHoc", maMonHoc);
             return csdl.ExecuteNonQuery(cmd);
         }
     }

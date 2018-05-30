@@ -29,25 +29,28 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtMaMonHoc = new System.Windows.Forms.TextBox();
-            this.txtTenMonHoc = new System.Windows.Forms.TextBox();
             this.numSoTiet = new System.Windows.Forms.NumericUpDown();
+            this.txtTenMonHoc = new System.Windows.Forms.TextBox();
+            this.txtMaMonHoc = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMonHoc = new System.Windows.Forms.DataGridView();
+            this.MaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTiet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSoTiet)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -65,23 +68,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin môn học";
             // 
-            // label1
+            // numSoTiet
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Mã môn học: ";
+            this.numSoTiet.Location = new System.Drawing.Point(139, 89);
+            this.numSoTiet.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numSoTiet.Name = "numSoTiet";
+            this.numSoTiet.Size = new System.Drawing.Size(120, 20);
+            this.numSoTiet.TabIndex = 2;
+            this.numSoTiet.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // label2
+            // txtTenMonHoc
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Tên môn học:";
+            this.txtTenMonHoc.Location = new System.Drawing.Point(139, 62);
+            this.txtTenMonHoc.Name = "txtTenMonHoc";
+            this.txtTenMonHoc.Size = new System.Drawing.Size(225, 20);
+            this.txtTenMonHoc.TabIndex = 1;
+            // 
+            // txtMaMonHoc
+            // 
+            this.txtMaMonHoc.Location = new System.Drawing.Point(139, 32);
+            this.txtMaMonHoc.Name = "txtMaMonHoc";
+            this.txtMaMonHoc.Size = new System.Drawing.Size(225, 20);
+            this.txtMaMonHoc.TabIndex = 1;
             // 
             // label3
             // 
@@ -92,26 +108,23 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Số tiết:";
             // 
-            // txtMaMonHoc
+            // label2
             // 
-            this.txtMaMonHoc.Location = new System.Drawing.Point(139, 32);
-            this.txtMaMonHoc.Name = "txtMaMonHoc";
-            this.txtMaMonHoc.Size = new System.Drawing.Size(225, 20);
-            this.txtMaMonHoc.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Tên môn học:";
             // 
-            // txtTenMonHoc
+            // label1
             // 
-            this.txtTenMonHoc.Location = new System.Drawing.Point(139, 62);
-            this.txtTenMonHoc.Name = "txtTenMonHoc";
-            this.txtTenMonHoc.Size = new System.Drawing.Size(225, 20);
-            this.txtTenMonHoc.TabIndex = 1;
-            // 
-            // numSoTiet
-            // 
-            this.numSoTiet.Location = new System.Drawing.Point(139, 89);
-            this.numSoTiet.Name = "numSoTiet";
-            this.numSoTiet.Size = new System.Drawing.Size(120, 20);
-            this.numSoTiet.TabIndex = 2;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã môn học: ";
             // 
             // groupBox2
             // 
@@ -127,32 +140,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
-            // btnLuu
+            // btnXoa
             // 
-            this.btnLuu.Location = new System.Drawing.Point(35, 20);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(58, 23);
-            this.btnLuu.TabIndex = 0;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Location = new System.Drawing.Point(99, 20);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(58, 23);
-            this.btnHuy.TabIndex = 0;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(163, 20);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(58, 23);
-            this.btnThem.TabIndex = 0;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnXoa.Location = new System.Drawing.Point(291, 20);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(58, 23);
+            this.btnXoa.TabIndex = 0;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -162,19 +158,43 @@
             this.btnSua.TabIndex = 0;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // btnXoa
+            // btnThem
             // 
-            this.btnXoa.Location = new System.Drawing.Point(291, 20);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(58, 23);
-            this.btnXoa.TabIndex = 0;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnThem.Location = new System.Drawing.Point(163, 20);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(58, 23);
+            this.btnThem.TabIndex = 0;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Enabled = false;
+            this.btnHuy.Location = new System.Drawing.Point(99, 20);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(58, 23);
+            this.btnHuy.TabIndex = 0;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Enabled = false;
+            this.btnLuu.Location = new System.Drawing.Point(35, 20);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(58, 23);
+            this.btnLuu.TabIndex = 0;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dataGridView1);
+            this.groupBox3.Controls.Add(this.dgvMonHoc);
             this.groupBox3.Location = new System.Drawing.Point(12, 214);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(384, 193);
@@ -182,14 +202,40 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách môn học";
             // 
-            // dataGridView1
+            // dgvMonHoc
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(378, 174);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvMonHoc.AllowUserToAddRows = false;
+            this.dgvMonHoc.AllowUserToDeleteRows = false;
+            this.dgvMonHoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMonHoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMonHoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaMon,
+            this.TenMon,
+            this.SoTiet});
+            this.dgvMonHoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvMonHoc.Location = new System.Drawing.Point(3, 16);
+            this.dgvMonHoc.Name = "dgvMonHoc";
+            this.dgvMonHoc.ReadOnly = true;
+            this.dgvMonHoc.Size = new System.Drawing.Size(378, 174);
+            this.dgvMonHoc.TabIndex = 0;
+            // 
+            // MaMon
+            // 
+            this.MaMon.DataPropertyName = "MaMon";
+            this.MaMon.HeaderText = "Mã môn";
+            this.MaMon.Name = "MaMon";
+            // 
+            // TenMon
+            // 
+            this.TenMon.DataPropertyName = "TenMon";
+            this.TenMon.HeaderText = "Tên môn học";
+            this.TenMon.Name = "TenMon";
+            // 
+            // SoTiet
+            // 
+            this.SoTiet.DataPropertyName = "SoTiet";
+            this.SoTiet.HeaderText = "Số tiết";
+            this.SoTiet.Name = "SoTiet";
             // 
             // QuanLyMonHocGUI
             // 
@@ -201,12 +247,13 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "QuanLyMonHocGUI";
             this.Text = "Quản lý môn học";
+            this.Load += new System.EventHandler(this.QuanLyMonHocGUI_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numSoTiet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -227,6 +274,9 @@
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMonHoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoTiet;
     }
 }

@@ -39,27 +39,26 @@
             this.txtTenMonHoc = new System.Windows.Forms.TextBox();
             this.txtMaMonHoc = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtNienKhoa = new System.Windows.Forms.TextBox();
+            this.cmbGVCN = new System.Windows.Forms.ComboBox();
+            this.numSiSo = new System.Windows.Forms.NumericUpDown();
             this.txtTenLop = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtMaLop = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.numSoTiet = new System.Windows.Forms.NumericUpDown();
-            this.numSiSo = new System.Windows.Forms.NumericUpDown();
-            this.cmbGVCN = new System.Windows.Forms.ComboBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSLop)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numSoTiet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSiSo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,6 +107,7 @@
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnHuy
             // 
@@ -170,6 +170,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin lớp học";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(24, 121);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Sĩ số";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -197,20 +206,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã lớp: ";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 121);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Sĩ số";
-            // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.txtNienKhoa);
             this.groupBox4.Controls.Add(this.cmbGVCN);
             this.groupBox4.Controls.Add(this.numSiSo);
-            this.groupBox4.Controls.Add(this.numSoTiet);
             this.groupBox4.Controls.Add(this.txtTenLop);
             this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.txtMaLop);
@@ -225,12 +225,43 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin lớp học";
             // 
+            // txtNienKhoa
+            // 
+            this.txtNienKhoa.Location = new System.Drawing.Point(139, 94);
+            this.txtNienKhoa.Name = "txtNienKhoa";
+            this.txtNienKhoa.Size = new System.Drawing.Size(82, 20);
+            this.txtNienKhoa.TabIndex = 5;
+            // 
+            // cmbGVCN
+            // 
+            this.cmbGVCN.FormattingEnabled = true;
+            this.cmbGVCN.Location = new System.Drawing.Point(139, 131);
+            this.cmbGVCN.Name = "cmbGVCN";
+            this.cmbGVCN.Size = new System.Drawing.Size(225, 21);
+            this.cmbGVCN.TabIndex = 4;
+            // 
+            // numSiSo
+            // 
+            this.numSiSo.Location = new System.Drawing.Point(293, 94);
+            this.numSiSo.Name = "numSiSo";
+            this.numSiSo.Size = new System.Drawing.Size(71, 20);
+            this.numSiSo.TabIndex = 3;
+            // 
             // txtTenLop
             // 
             this.txtTenLop.Location = new System.Drawing.Point(139, 62);
             this.txtTenLop.Name = "txtTenLop";
             this.txtTenLop.Size = new System.Drawing.Size(225, 20);
             this.txtTenLop.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(24, 134);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(107, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Giáo viên chủ nhiệm:";
             // 
             // txtMaLop
             // 
@@ -247,7 +278,6 @@
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 0;
             this.label5.Text = "Sĩ số:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -276,38 +306,6 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Mã lớp: ";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 134);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(107, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Giáo viên chủ nhiệm:";
-            this.label10.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // numSoTiet
-            // 
-            this.numSoTiet.Location = new System.Drawing.Point(139, 94);
-            this.numSoTiet.Name = "numSoTiet";
-            this.numSoTiet.Size = new System.Drawing.Size(71, 20);
-            this.numSoTiet.TabIndex = 3;
-            // 
-            // numSiSo
-            // 
-            this.numSiSo.Location = new System.Drawing.Point(293, 94);
-            this.numSiSo.Name = "numSiSo";
-            this.numSiSo.Size = new System.Drawing.Size(71, 20);
-            this.numSiSo.TabIndex = 3;
-            // 
-            // cmbGVCN
-            // 
-            this.cmbGVCN.FormattingEnabled = true;
-            this.cmbGVCN.Location = new System.Drawing.Point(139, 131);
-            this.cmbGVCN.Name = "cmbGVCN";
-            this.cmbGVCN.Size = new System.Drawing.Size(225, 21);
-            this.cmbGVCN.TabIndex = 4;
-            // 
             // QuanLyLopGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,6 +317,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "QuanLyLopGUI";
             this.Text = "Quản lý lớp";
+            this.Load += new System.EventHandler(this.QuanLyLopGUI_Load);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSLop)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -326,7 +325,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numSoTiet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numSiSo)).EndInit();
             this.ResumeLayout(false);
 
@@ -359,6 +357,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox cmbGVCN;
         private System.Windows.Forms.NumericUpDown numSiSo;
-        private System.Windows.Forms.NumericUpDown numSoTiet;
+        private System.Windows.Forms.TextBox txtNienKhoa;
     }
 }
