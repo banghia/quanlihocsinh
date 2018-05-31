@@ -33,13 +33,18 @@ namespace GUI
             cmbMonHoc.DataSource = monHocBUS.All();
             cmbMonHoc.DisplayMember = "TenMon";
             cmbMonHoc.ValueMember = "MaMon";
-            cmbTenGV.DataSource = cbgvBUS.All();
+            cmbTenGV.DataSource = cbgvBUS.AllGiaoVien();
             cmbTenGV.DisplayMember = "HoTen";
             cmbTenGV.ValueMember = "MaCanBoGiaoVien";
         }
 
         private void btnPhanCong_Click(object sender, EventArgs e)
         {
+            if (cmbTenLop.SelectedIndex == -1 || cmbTenGV.SelectedIndex == -1 || cmbMonHoc.SelectedIndex == -1) {
+                MessageBox.Show("Không để trống thông tin.");
+                return;
+            }
+
             PhanCongGiangDay pcgd = new PhanCongGiangDay();
             pcgd.MaLop = cmbTenLop.SelectedValue.ToString();
             pcgd.MaMon = cmbMonHoc.SelectedValue.ToString();

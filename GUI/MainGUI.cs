@@ -82,6 +82,7 @@ namespace GUI
 
         private void MainGUI_Load(object sender, EventArgs e)
         {
+            tàiKhoảnToolStripMenuItem.Text = "Chào: " + user.HoTen;
             if (user.LoaiTaiKhoan.Equals("Admin"))
             {
                 quảnLýĐiểmToolStripMenuItem1.Visible = false;
@@ -94,6 +95,26 @@ namespace GUI
                 phânCôngGiảngDạyToolStripMenuItem.Visible = false;
                 thốngKêBáoCáoToolStripMenuItem.Visible = false;
             }
+        }
+
+        private void MainGUI_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thoát", MessageBoxButtons.YesNo);
+            if (result == DialogResult.No) {
+                e.Cancel = true;
+            }
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void thôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThongTinGUI thongTin = new ThongTinGUI();
+            thongTin.MdiParent = this;
+            thongTin.Show();
         }
     }
 }

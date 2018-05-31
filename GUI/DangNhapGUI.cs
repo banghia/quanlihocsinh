@@ -24,14 +24,18 @@ namespace GUI
         {
             if (String.IsNullOrEmpty(txtTaiKhoan.Text) || String.IsNullOrEmpty(txtMatKhau.Text)) {
                 MessageBox.Show("Nhập tên tài khoản và mật khẩu.");
+                txtTaiKhoan.Focus();
                 return;
             }
 
             CanBoGiaoVien user = dangNhapBUS.DangNhap(txtTaiKhoan.Text, txtMatKhau.Text);
             if (user == null) {
                 MessageBox.Show("Sai tên tài khoản hoặc mật khẩu.");
+                txtTaiKhoan.Focus();
                 return;
             }
+            txtTaiKhoan.Clear();
+            txtMatKhau.Clear();
             MainGUI main = new MainGUI(user);
             this.Hide();
             main.ShowDialog();

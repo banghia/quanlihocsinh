@@ -19,6 +19,20 @@ namespace DTL
             return csdl.ExecuteQuery(cmd);
         }
 
+        public DataTable AllAdmin()
+        {
+            string que = "select * from CanBoGiaoVien where LoaiTaiKhoan = 'Admin'";
+            SqlCommand cmd = new SqlCommand(que);
+            return csdl.ExecuteQuery(cmd);
+        }
+
+        public DataTable AllGiaoVien()
+        {
+            string que = "select * from CanBoGiaoVien where LoaiTaiKhoan = 'Giáo Viên'";
+            SqlCommand cmd = new SqlCommand(que);
+            return csdl.ExecuteQuery(cmd);
+        }
+
         public DataTable Get(string maCanBoGiaoVien)
         {
             string que = "select * from CanBoGiaoVien where MaCanBoGiaoVien = @MaCanBoGiaoVien";

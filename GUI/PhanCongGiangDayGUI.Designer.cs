@@ -40,6 +40,10 @@
             this.btnPhanCong = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnXem = new System.Windows.Forms.Button();
+            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaCanBoGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayPhanCong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSPhanCongGiangDay)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -53,25 +57,31 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(517, 210);
+            this.groupBox3.Size = new System.Drawing.Size(630, 238);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách phân công giảng dạy";
             // 
             // dgvDSPhanCongGiangDay
             // 
+            this.dgvDSPhanCongGiangDay.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSPhanCongGiangDay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSPhanCongGiangDay.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaLop,
+            this.MaMon,
+            this.MaCanBoGiaoVien,
+            this.NgayPhanCong});
             this.dgvDSPhanCongGiangDay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDSPhanCongGiangDay.Location = new System.Drawing.Point(4, 19);
             this.dgvDSPhanCongGiangDay.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDSPhanCongGiangDay.Name = "dgvDSPhanCongGiangDay";
-            this.dgvDSPhanCongGiangDay.Size = new System.Drawing.Size(509, 187);
+            this.dgvDSPhanCongGiangDay.Size = new System.Drawing.Size(622, 215);
             this.dgvDSPhanCongGiangDay.TabIndex = 0;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(32, 118);
+            this.label6.Location = new System.Drawing.Point(51, 118);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 17);
@@ -81,7 +91,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(32, 80);
+            this.label7.Location = new System.Drawing.Point(51, 80);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(98, 17);
@@ -100,7 +110,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(517, 164);
+            this.groupBox4.Size = new System.Drawing.Size(626, 164);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin lớp học";
@@ -109,36 +119,36 @@
             // 
             this.cmbTenLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTenLop.FormattingEnabled = true;
-            this.cmbTenLop.Location = new System.Drawing.Point(168, 108);
+            this.cmbTenLop.Location = new System.Drawing.Point(187, 115);
             this.cmbTenLop.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTenLop.Name = "cmbTenLop";
-            this.cmbTenLop.Size = new System.Drawing.Size(311, 24);
+            this.cmbTenLop.Size = new System.Drawing.Size(389, 24);
             this.cmbTenLop.TabIndex = 3;
             // 
             // cmbTenGV
             // 
             this.cmbTenGV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTenGV.FormattingEnabled = true;
-            this.cmbTenGV.Location = new System.Drawing.Point(168, 70);
+            this.cmbTenGV.Location = new System.Drawing.Point(187, 77);
             this.cmbTenGV.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTenGV.Name = "cmbTenGV";
-            this.cmbTenGV.Size = new System.Drawing.Size(311, 24);
+            this.cmbTenGV.Size = new System.Drawing.Size(389, 24);
             this.cmbTenGV.TabIndex = 2;
             // 
             // cmbMonHoc
             // 
             this.cmbMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMonHoc.FormattingEnabled = true;
-            this.cmbMonHoc.Location = new System.Drawing.Point(168, 30);
+            this.cmbMonHoc.Location = new System.Drawing.Point(187, 36);
             this.cmbMonHoc.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMonHoc.Name = "cmbMonHoc";
-            this.cmbMonHoc.Size = new System.Drawing.Size(311, 24);
+            this.cmbMonHoc.Size = new System.Drawing.Size(389, 24);
             this.cmbMonHoc.TabIndex = 1;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(32, 39);
+            this.label8.Location = new System.Drawing.Point(51, 39);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(99, 17);
@@ -147,7 +157,7 @@
             // 
             // btnPhanCong
             // 
-            this.btnPhanCong.Location = new System.Drawing.Point(148, 23);
+            this.btnPhanCong.Location = new System.Drawing.Point(204, 23);
             this.btnPhanCong.Margin = new System.Windows.Forms.Padding(4);
             this.btnPhanCong.Name = "btnPhanCong";
             this.btnPhanCong.Size = new System.Drawing.Size(100, 28);
@@ -164,14 +174,14 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(516, 63);
+            this.groupBox2.Size = new System.Drawing.Size(626, 63);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
             // btnXem
             // 
-            this.btnXem.Location = new System.Drawing.Point(267, 23);
+            this.btnXem.Location = new System.Drawing.Point(323, 23);
             this.btnXem.Margin = new System.Windows.Forms.Padding(4);
             this.btnXem.Name = "btnXem";
             this.btnXem.Size = new System.Drawing.Size(100, 28);
@@ -179,11 +189,35 @@
             this.btnXem.Text = "Xem";
             this.btnXem.UseVisualStyleBackColor = true;
             // 
+            // MaLop
+            // 
+            this.MaLop.DataPropertyName = "MaLop";
+            this.MaLop.HeaderText = "Mã lớp";
+            this.MaLop.Name = "MaLop";
+            // 
+            // MaMon
+            // 
+            this.MaMon.DataPropertyName = "MaMon";
+            this.MaMon.HeaderText = "Mã môn học";
+            this.MaMon.Name = "MaMon";
+            // 
+            // MaCanBoGiaoVien
+            // 
+            this.MaCanBoGiaoVien.DataPropertyName = "MaCanBoGiaoVien";
+            this.MaCanBoGiaoVien.HeaderText = "Giáo Viên";
+            this.MaCanBoGiaoVien.Name = "MaCanBoGiaoVien";
+            // 
+            // NgayPhanCong
+            // 
+            this.NgayPhanCong.DataPropertyName = "NgayPhanCong";
+            this.NgayPhanCong.HeaderText = "Ngày Phân Công";
+            this.NgayPhanCong.Name = "NgayPhanCong";
+            // 
             // PhanCongGiangDayGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(545, 478);
+            this.ClientSize = new System.Drawing.Size(656, 508);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
@@ -215,5 +249,9 @@
         private System.Windows.Forms.Button btnPhanCong;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnXem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaCanBoGiaoVien;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayPhanCong;
     }
 }

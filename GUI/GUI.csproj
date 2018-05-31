@@ -105,6 +105,12 @@
     <Compile Include="QuanLyMonHocGUI.Designer.cs">
       <DependentUpon>QuanLyMonHocGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ThongTinGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThongTinGUI.Designer.cs">
+      <DependentUpon>ThongTinGUI.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CanBoGiaoVienGUI.resx">
       <DependentUpon>CanBoGiaoVienGUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyMonHocGUI.resx">
       <DependentUpon>QuanLyMonHocGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThongTinGUI.resx">
+      <DependentUpon>ThongTinGUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>

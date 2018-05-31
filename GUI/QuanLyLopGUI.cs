@@ -25,7 +25,7 @@ namespace GUI
         private void QuanLyLopGUI_Load(object sender, EventArgs e)
         {
             dgvDSLop.DataSource = lopBus.All();
-            cmbGVCN.DataSource = cbgvBUS.All();
+            cmbGVCN.DataSource = cbgvBUS.AllGiaoVien();
             cmbGVCN.DisplayMember = "HoTen";
             cmbGVCN.ValueMember = "MaCanBoGiaoVien";
             XoaDuLieuForm();
@@ -44,14 +44,13 @@ namespace GUI
             txtTenLop.Clear();
             txtNienKhoa.Clear();
             numSiSo.Value = numSiSo.Minimum;
-            cmbGVCN.SelectedIndex = 0;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             // kiểm tra thông tin không được để trống 
             if (string.IsNullOrEmpty(txtMaLop.Text) || string.IsNullOrEmpty(txtTenLop.Text)
-                || string.IsNullOrEmpty(txtNienKhoa.Text) || string.IsNullOrEmpty(cmbGVCN.Text))
+                || string.IsNullOrEmpty(txtNienKhoa.Text) || string.IsNullOrEmpty(cmbGVCN.Text) || cmbGVCN.SelectedIndex == -1)
             {
                 MessageBox.Show("Không được để trống thông tin");
                 return;
@@ -135,7 +134,7 @@ namespace GUI
         {
             // kiểm tra thông tin không được để trống 
             if (string.IsNullOrEmpty(txtMaLop.Text) || string.IsNullOrEmpty(txtTenLop.Text)
-                || string.IsNullOrEmpty(txtNienKhoa.Text) || string.IsNullOrEmpty(cmbGVCN.Text))
+                || string.IsNullOrEmpty(txtNienKhoa.Text) || string.IsNullOrEmpty(cmbGVCN.Text) || cmbGVCN.SelectedIndex == -1)
             {
                 MessageBox.Show("Không được để trống thông tin");
                 return;

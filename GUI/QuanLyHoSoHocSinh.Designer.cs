@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numDiemVaoTruong = new System.Windows.Forms.NumericUpDown();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cmbLop = new System.Windows.Forms.ComboBox();
             this.cmbGioiTinh = new System.Windows.Forms.ComboBox();
@@ -54,12 +55,11 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvHSHS = new System.Windows.Forms.DataGridView();
-            this.numDiemVaoTruong = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDiemVaoTruong)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHSHS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDiemVaoTruong)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -91,6 +91,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin học sinh";
             // 
+            // numDiemVaoTruong
+            // 
+            this.numDiemVaoTruong.Location = new System.Drawing.Point(815, 82);
+            this.numDiemVaoTruong.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            this.numDiemVaoTruong.Name = "numDiemVaoTruong";
+            this.numDiemVaoTruong.Size = new System.Drawing.Size(132, 22);
+            this.numDiemVaoTruong.TabIndex = 5;
+            // 
             // dtpNgaySinh
             // 
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -98,7 +110,7 @@
             this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(4);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
             this.dtpNgaySinh.Size = new System.Drawing.Size(132, 22);
-            this.dtpNgaySinh.TabIndex = 4;
+            this.dtpNgaySinh.TabIndex = 2;
             // 
             // cmbLop
             // 
@@ -108,7 +120,7 @@
             this.cmbLop.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLop.Name = "cmbLop";
             this.cmbLop.Size = new System.Drawing.Size(132, 24);
-            this.cmbLop.TabIndex = 3;
+            this.cmbLop.TabIndex = 8;
             // 
             // cmbGioiTinh
             // 
@@ -129,7 +141,7 @@
             this.txtHoTenBoMe.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoTenBoMe.Name = "txtHoTenBoMe";
             this.txtHoTenBoMe.Size = new System.Drawing.Size(167, 22);
-            this.txtHoTenBoMe.TabIndex = 2;
+            this.txtHoTenBoMe.TabIndex = 6;
             // 
             // txtSoDienThoai
             // 
@@ -137,7 +149,7 @@
             this.txtSoDienThoai.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(182, 22);
-            this.txtSoDienThoai.TabIndex = 2;
+            this.txtSoDienThoai.TabIndex = 7;
             // 
             // txtDiaChi
             // 
@@ -145,7 +157,7 @@
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(182, 22);
-            this.txtDiaChi.TabIndex = 2;
+            this.txtDiaChi.TabIndex = 4;
             // 
             // txtHoTen
             // 
@@ -153,7 +165,7 @@
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(182, 22);
-            this.txtHoTen.TabIndex = 2;
+            this.txtHoTen.TabIndex = 1;
             // 
             // txtMaHS
             // 
@@ -161,7 +173,7 @@
             this.txtMaHS.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaHS.Name = "txtMaHS";
             this.txtMaHS.Size = new System.Drawing.Size(167, 22);
-            this.txtMaHS.TabIndex = 2;
+            this.txtMaHS.TabIndex = 0;
             // 
             // label3
             // 
@@ -176,7 +188,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 87);
+            this.label2.Location = new System.Drawing.Point(41, 82);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 17);
@@ -275,7 +287,7 @@
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(83, 28);
-            this.btnXoa.TabIndex = 4;
+            this.btnXoa.TabIndex = 11;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -286,7 +298,7 @@
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(77, 28);
-            this.btnSua.TabIndex = 5;
+            this.btnSua.TabIndex = 10;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -297,7 +309,7 @@
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(83, 28);
-            this.btnThem.TabIndex = 3;
+            this.btnThem.TabIndex = 9;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -309,7 +321,7 @@
             this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(83, 28);
-            this.btnHuy.TabIndex = 1;
+            this.btnHuy.TabIndex = 13;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
@@ -321,7 +333,7 @@
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(89, 28);
-            this.btnLuu.TabIndex = 2;
+            this.btnLuu.TabIndex = 12;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -351,18 +363,6 @@
             this.dgvHSHS.Size = new System.Drawing.Size(984, 227);
             this.dgvHSHS.TabIndex = 0;
             // 
-            // numDiemVaoTruong
-            // 
-            this.numDiemVaoTruong.Location = new System.Drawing.Point(815, 82);
-            this.numDiemVaoTruong.Maximum = new decimal(new int[] {
-            30,
-            0,
-            0,
-            0});
-            this.numDiemVaoTruong.Name = "numDiemVaoTruong";
-            this.numDiemVaoTruong.Size = new System.Drawing.Size(132, 22);
-            this.numDiemVaoTruong.TabIndex = 5;
-            // 
             // QuanLyHoSoHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -377,10 +377,10 @@
             this.Load += new System.EventHandler(this.QuanLyHoSoHocSinh_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numDiemVaoTruong)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHSHS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numDiemVaoTruong)).EndInit();
             this.ResumeLayout(false);
 
         }

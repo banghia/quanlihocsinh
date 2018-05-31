@@ -17,6 +17,16 @@ namespace BUS
             return canBoGiaoVienDTL.All();
         }
 
+        public DataTable AllAdmin()
+        {
+            return canBoGiaoVienDTL.AllAdmin();
+        }
+
+        public DataTable AllGiaoVien()
+        {
+            return canBoGiaoVienDTL.AllGiaoVien();
+        }
+
         public CanBoGiaoVien Get(string maCanBoGiaoVien)
         {
             DataTable dt = canBoGiaoVienDTL.Get(maCanBoGiaoVien);
