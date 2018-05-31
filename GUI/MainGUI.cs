@@ -6,14 +6,19 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DTO;
 
 namespace GUI
 {
     public partial class MainGUI : Form
     {
-        public MainGUI()
+
+        CanBoGiaoVien user;
+
+        public MainGUI(CanBoGiaoVien user)
         {
             InitializeComponent();
+            this.user = user;
         }
 
         private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,6 +78,22 @@ namespace GUI
             DanhSachGV1Lop danhSachGV1Lop = new DanhSachGV1Lop();
             danhSachGV1Lop.MdiParent = this;
             danhSachGV1Lop.Show();
+        }
+
+        private void MainGUI_Load(object sender, EventArgs e)
+        {
+            if (user.LoaiTaiKhoan.Equals("Admin"))
+            {
+                quảnLýĐiểmToolStripMenuItem1.Visible = false;
+            }
+            else {
+                quảnLýCánBộGiáoViênToolStripMenuItem.Visible = false;
+                quảnLýHồSơHọcSinhToolStripMenuItem.Visible = false;
+                quảnLýLớpToolStripMenuItem.Visible = false;
+                quảnLýMônHọcToolStripMenuItem.Visible = false;
+                phânCôngGiảngDạyToolStripMenuItem.Visible = false;
+                thốngKêBáoCáoToolStripMenuItem.Visible = false;
+            }
         }
     }
 }

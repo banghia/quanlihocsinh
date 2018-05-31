@@ -15,7 +15,7 @@ namespace DTL
         // Trả về tất cả dl trong bảng Lop
         public DataTable All()
         {
-            string query = "select * from Lop inner join CanBoGiaoVien on Lop.GiaoVienChuNhiem = CanBoGiaoVien.MaCanBoGiaoVien";
+            string query = "select MaLop, TenLop, NienKhoa, SiSo, HoTen as GiaoVienChuNhiem from Lop inner join CanBoGiaoVien on Lop.GiaoVienChuNhiem = CanBoGiaoVien.MaCanBoGiaoVien";
             SqlCommand cmd = new SqlCommand(query);
             return csdl.ExecuteQuery(cmd);
         }

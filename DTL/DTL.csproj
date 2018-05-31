@@ -43,8 +43,10 @@
   <ItemGroup>
     <Compile Include="CanBoGiaoVienDTL.cs" />
     <Compile Include="CSDL.cs" />
+    <Compile Include="HoSoHocSinhDTL.cs" />
     <Compile Include="LopDTL.cs" />
     <Compile Include="MonHocDTL.cs" />
+    <Compile Include="PhanCongGiangDayDTL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

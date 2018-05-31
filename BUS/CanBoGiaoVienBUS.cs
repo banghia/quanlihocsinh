@@ -24,24 +24,30 @@ namespace BUS
             return canBoGiaoVien;
         }
 
-        public bool Insert(CanBoGiaoVien CBGV)
+        public bool Insert(CanBoGiaoVien canBoGiaoVien)
         {
-            return canBoGiaoVienDTL.Insert(CBGV) > 0;
+            return canBoGiaoVienDTL.Insert(canBoGiaoVien) > 0;
         }
 
-        public bool Update(CanBoGiaoVien CBGV)
+        public bool Update(CanBoGiaoVien canBoGiaoVien)
         {
-            return canBoGiaoVienDTL.Update(CBGV) > 0;
+            return canBoGiaoVienDTL.Update(canBoGiaoVien) > 0;
         }
 
-        public bool Delete(CanBoGiaoVien CBGV)
+        public bool Delete(string maCanBoGiaoVien)
         {
-            return canBoGiaoVienDTL.Delete(CBGV) > 0;
+            return canBoGiaoVienDTL.Delete(maCanBoGiaoVien) > 0;
         }
 
         public bool Exist(string maCanBoGiaoVien)
         {
             DataTable dt = canBoGiaoVienDTL.Get(maCanBoGiaoVien);
+            return dt.Rows.Count > 0;
+        }
+
+        public bool ExistAccount(string taiKhoan)
+        {
+            DataTable dt = canBoGiaoVienDTL.GetAccount(taiKhoan);
             return dt.Rows.Count > 0;
         }
     }

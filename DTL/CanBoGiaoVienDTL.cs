@@ -14,7 +14,7 @@ namespace DTL
         // trả về dữ liệu trong 1 bảng
         public DataTable All()
         {
-            string que = "select *from CanBoGiaoVien";
+            string que = "select * from CanBoGiaoVien";
             SqlCommand cmd = new SqlCommand(que);
             return csdl.ExecuteQuery(cmd);
         }
@@ -24,6 +24,23 @@ namespace DTL
             string que = "select * from CanBoGiaoVien where MaCanBoGiaoVien = @MaCanBoGiaoVien";
             SqlCommand cmd = new SqlCommand(que);
             cmd.Parameters.AddWithValue("@MaCanBoGiaoVien", maCanBoGiaoVien);
+            return csdl.ExecuteQuery(cmd);
+        }
+
+        public DataTable GetAccount(string taiKhoan, string matKhau)
+        {
+            string que = "select * from CanBoGiaoVien where TaiKhoan = @TaiKhoan and MatKhau = @MatKhau";
+            SqlCommand cmd = new SqlCommand(que);
+            cmd.Parameters.AddWithValue("@TaiKhoan", taiKhoan);
+            cmd.Parameters.AddWithValue("@MatKhau", matKhau);
+            return csdl.ExecuteQuery(cmd);
+        }
+
+        public DataTable GetAccount(string taiKhoan)
+        {
+            string que = "select * from CanBoGiaoVien where TaiKhoan = @TaiKhoan";
+            SqlCommand cmd = new SqlCommand(que);
+            cmd.Parameters.AddWithValue("@TaiKhoan", taiKhoan);
             return csdl.ExecuteQuery(cmd);
         }
 
@@ -55,11 +72,11 @@ namespace DTL
             return csdl.ExecuteNonQuery(cmd);
         }
 
-        public int Delete(CanBoGiaoVien canBoGiaoVien)
+        public int Delete(string maCanBoGiaoVien)
         {
             string que = "delete from CanBoGiaoVien where MaCanBoGiaoVien = @MaCanBoGiaoVien";
             SqlCommand cmd = new SqlCommand(que);
-            cmd.Parameters.AddWithValue("@MaCanBoGiaoVien", canBoGiaoVien.MaCanBoGiaoVien);
+            cmd.Parameters.AddWithValue("@MaCanBoGiaoVien", maCanBoGiaoVien);
             return csdl.ExecuteNonQuery(cmd);
         }
     }
