@@ -19,8 +19,14 @@ namespace GUI
         private void bntDangNhap_Click(object sender, EventArgs e)
         {
             MainGUI main = new MainGUI();
-            main.Show();
             this.Hide();
+            main.ShowDialog();
+            this.Show();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
