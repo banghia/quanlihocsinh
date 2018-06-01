@@ -22,6 +22,7 @@ namespace GUI
 
         private void DanhSachHocSinh_Load(object sender, EventArgs e)
         {
+            //Load dữ liệu lên cmb.
             cmbLop.DataSource = lopBUS.All();
             cmbLop.DisplayMember = "TenLop";
             cmbLop.ValueMember = "MaLop";
@@ -30,7 +31,9 @@ namespace GUI
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
+            //Đổ dữ liệu lên report.
             this.HoSoHocSinhTableAdapter.Fill(this.QLHocSinhDataSet.HoSoHocSinh, cmbLop.SelectedValue.ToString());
+            //Lấy ra form main để tham chiếu đến user đã đăng nhập.
             MainGUI mainForm = (MainGUI)this.MdiParent;
             this.rpvTTHocSinh.LocalReport.SetParameters(new ReportParameter[]{
                 new ReportParameter("TenLop", cmbLop.Text),

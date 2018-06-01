@@ -88,6 +88,7 @@ namespace GUI
 
         private void MainGUI_Load(object sender, EventArgs e)
         {
+            //Ẩn hiện các chức năng tùy vào tài khoản Admin hay giáo viên.
             tàiKhoảnToolStripMenuItem.Text = "Chào: " + user.HoTen;
             if (user.LoaiTaiKhoan.Equals("Admin"))
             {
@@ -125,6 +126,7 @@ namespace GUI
 
         private void đóngToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Đóng form con đang active.
             if (this.ActiveMdiChild != null) {
                 this.ActiveMdiChild.Close();
             }
@@ -132,6 +134,7 @@ namespace GUI
 
         private void đóngTấtCảToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Đóng tất cả form con.
             foreach(var child in this.MdiChildren){
                 child.Close();
             }

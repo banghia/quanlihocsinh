@@ -22,6 +22,7 @@ namespace GUI
 
         private void DanhSachGV1Lop_Load(object sender, EventArgs e)
         {
+            //Load dữ liệu lên cmb.
             cmbLop.DataSource = lopBUS.All();
             cmbLop.DisplayMember = "TenLop";
             cmbLop.ValueMember = "MaLop";
@@ -30,7 +31,9 @@ namespace GUI
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
+            //Đổ dữ liệu vào report.
             this.dsGiaoVienLopTableAdapter.Fill(this.dsGiaoVienLopDataSet.dsGiaoVienLop, cmbLop.SelectedValue.ToString());
+            //Lấy ra form main để tham chiếu đên user đã đăng nhập.
             MainGUI main = (MainGUI)this.MdiParent;
             this.reportViewer1.LocalReport.SetParameters(new ReportParameter[]{
                 new ReportParameter("TenLop", cmbLop.Text),
