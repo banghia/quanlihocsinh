@@ -171,5 +171,10 @@ namespace GUI
             BatTatLHTSX();
             XoaDuLieuForm();
         }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            dgvCanBoGiaoVien.DataSource = cbgvBUS.Search(txtTim.Text);
+        }
     }
 }

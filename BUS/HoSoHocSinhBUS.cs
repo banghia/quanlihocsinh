@@ -24,6 +24,14 @@ namespace BUS
             return hshs;
         }
 
+        public DataTable Search(string maHocSinh)
+        {
+            if (String.IsNullOrEmpty(maHocSinh)) {
+                return All();
+            }
+            return hshsDTL.Search(maHocSinh);
+        }
+
         public bool Insert(HoSoHocSinh hshs)
         {
             return hshsDTL.Insert(hshs) > 0;

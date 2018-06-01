@@ -28,6 +28,14 @@ namespace DTL
             return csdl.ExecuteQuery(cmd);
         }
 
+        public DataTable Search(string maHocSinh)
+        {
+            string que = "select * from HoSoHocSinh where MaHocSinh = @MaHocSinh";
+            SqlCommand cmd = new SqlCommand(que);
+            cmd.Parameters.AddWithValue("@MaHocSinh", maHocSinh);
+            return csdl.ExecuteQuery(cmd);
+        }
+
         public int Insert(HoSoHocSinh hoSoHocSinh)
         {
             string que = "insert into HoSoHocSinh values(@MaHocSinh, @HoTen, @NgaySinh, @GioiTinh, @DiaChi, @DiemVaoTruong, @HoTenBoMe, @SoDienThoai, @MaLop)";

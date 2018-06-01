@@ -27,6 +27,14 @@ namespace DTL
             return csdl.ExecuteQuery(cmd);
         }
 
+        public DataTable Search(string maMonHoc)
+        {
+            string query = "select * from MonHoc where MaMon = @MaMonHoc";
+            SqlCommand cmd = new SqlCommand(query);
+            cmd.Parameters.AddWithValue("@MaMonHoc", maMonHoc);
+            return csdl.ExecuteQuery(cmd);
+        }
+
         public int Insert(MonHoc mh) {
             string query = "insert into MonHoc values(@MaMonHoc, @TenMonHoc, @SoTiet)";
             SqlCommand cmd = new SqlCommand(query);

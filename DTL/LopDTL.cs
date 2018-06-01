@@ -28,6 +28,14 @@ namespace DTL
             return csdl.ExecuteQuery(cmd);
         }
 
+        public DataTable Search(string maLop)
+        {
+            string query = "select MaLop, TenLop, NienKhoa, SiSo, HoTen as GiaoVienChuNhiem from Lop inner join CanBoGiaoVien on Lop.GiaoVienChuNhiem = CanBoGiaoVien.MaCanBoGiaoVien where MaLop = @MaLop";
+            SqlCommand cmd = new SqlCommand(query);
+            cmd.Parameters.AddWithValue("@MaLop", maLop);
+            return csdl.ExecuteQuery(cmd);
+        }
+
         public int Insert(Lop lop)
         {
             string query = "insert into Lop values(@MaLop, @TenLop, @NienKhoa, @SiSo, @GiaoVienChuNhiem)";

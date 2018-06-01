@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rpvTTHocSinh = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.txtTenLop = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnThongKe = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtTenLop = new System.Windows.Forms.TextBox();
+            this.rpvTTHocSinh = new Microsoft.Reporting.WinForms.ReportViewer();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,54 +41,62 @@
             this.groupBox1.Controls.Add(this.btnThongKe);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtTenLop);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(16, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(559, 64);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(953, 79);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin học sinh";
             // 
-            // rpvTTHocSinh
-            // 
-            this.rpvTTHocSinh.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.rpvTTHocSinh.Location = new System.Drawing.Point(0, 94);
-            this.rpvTTHocSinh.Name = "rpvTTHocSinh";
-            this.rpvTTHocSinh.Size = new System.Drawing.Size(583, 342);
-            this.rpvTTHocSinh.TabIndex = 1;
-            // 
-            // txtTenLop
-            // 
-            this.txtTenLop.Location = new System.Drawing.Point(122, 28);
-            this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(222, 20);
-            this.txtTenLop.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tên lớp:";
-            // 
             // btnThongKe
             // 
-            this.btnThongKe.Location = new System.Drawing.Point(379, 25);
+            this.btnThongKe.Location = new System.Drawing.Point(668, 31);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(75, 23);
+            this.btnThongKe.Size = new System.Drawing.Size(100, 28);
             this.btnThongKe.TabIndex = 2;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(222, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tên lớp:";
+            // 
+            // txtTenLop
+            // 
+            this.txtTenLop.Location = new System.Drawing.Point(326, 34);
+            this.txtTenLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenLop.Name = "txtTenLop";
+            this.txtTenLop.Size = new System.Drawing.Size(295, 22);
+            this.txtTenLop.TabIndex = 0;
+            // 
+            // rpvTTHocSinh
+            // 
+            this.rpvTTHocSinh.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.rpvTTHocSinh.Location = new System.Drawing.Point(0, 116);
+            this.rpvTTHocSinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rpvTTHocSinh.Name = "rpvTTHocSinh";
+            this.rpvTTHocSinh.Size = new System.Drawing.Size(982, 487);
+            this.rpvTTHocSinh.TabIndex = 1;
+            // 
             // DanhSachHocSinh
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 436);
+            this.ClientSize = new System.Drawing.Size(982, 603);
             this.Controls.Add(this.rpvTTHocSinh);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DanhSachHocSinh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách học sinh";
             this.Load += new System.EventHandler(this.DanhSachHocSinh_Load);
             this.groupBox1.ResumeLayout(false);

@@ -152,5 +152,10 @@ namespace GUI
             btnHuy_Click(sender, e);
             QuanLyLopGUI_Load(sender, e);
         }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            dgvDSLop.DataSource = lopBus.Search(txtTim.Text);
+        }
     }
 }

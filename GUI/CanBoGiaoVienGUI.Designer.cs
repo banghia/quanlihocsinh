@@ -34,6 +34,13 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvCanBoGiaoVien = new System.Windows.Forms.DataGridView();
+            this.MaCanBoGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LoaiTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnXoa = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -52,13 +59,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.MaCanBoGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoaiTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.txtTim = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCanBoGiaoVien)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -114,12 +116,15 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnTim);
+            this.groupBox3.Controls.Add(this.txtTim);
             this.groupBox3.Controls.Add(this.dgvCanBoGiaoVien);
-            this.groupBox3.Location = new System.Drawing.Point(21, 302);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox3.Location = new System.Drawing.Point(0, 302);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(932, 230);
+            this.groupBox3.Size = new System.Drawing.Size(984, 278);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách học sinh";
@@ -138,13 +143,62 @@
             this.TaiKhoan,
             this.MatKhau,
             this.LoaiTaiKhoan});
-            this.dgvCanBoGiaoVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvCanBoGiaoVien.Location = new System.Drawing.Point(4, 19);
+            this.dgvCanBoGiaoVien.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvCanBoGiaoVien.Location = new System.Drawing.Point(4, 55);
             this.dgvCanBoGiaoVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgvCanBoGiaoVien.Name = "dgvCanBoGiaoVien";
             this.dgvCanBoGiaoVien.ReadOnly = true;
-            this.dgvCanBoGiaoVien.Size = new System.Drawing.Size(924, 207);
+            this.dgvCanBoGiaoVien.Size = new System.Drawing.Size(976, 219);
             this.dgvCanBoGiaoVien.TabIndex = 0;
+            // 
+            // MaCanBoGiaoVien
+            // 
+            this.MaCanBoGiaoVien.DataPropertyName = "MaCanBoGiaoVien";
+            this.MaCanBoGiaoVien.HeaderText = "Mã";
+            this.MaCanBoGiaoVien.Name = "MaCanBoGiaoVien";
+            this.MaCanBoGiaoVien.ReadOnly = true;
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "HoTen";
+            this.HoTen.HeaderText = "Họ tên";
+            this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // SoDienThoai
+            // 
+            this.SoDienThoai.DataPropertyName = "SoDienThoai";
+            this.SoDienThoai.HeaderText = "Số điện thoại";
+            this.SoDienThoai.Name = "SoDienThoai";
+            this.SoDienThoai.ReadOnly = true;
+            // 
+            // TaiKhoan
+            // 
+            this.TaiKhoan.DataPropertyName = "TaiKhoan";
+            this.TaiKhoan.HeaderText = "Tài khoản";
+            this.TaiKhoan.Name = "TaiKhoan";
+            this.TaiKhoan.ReadOnly = true;
+            // 
+            // MatKhau
+            // 
+            this.MatKhau.DataPropertyName = "MatKhau";
+            this.MatKhau.HeaderText = "Mật Khẩu";
+            this.MatKhau.Name = "MatKhau";
+            this.MatKhau.ReadOnly = true;
+            // 
+            // LoaiTaiKhoan
+            // 
+            this.LoaiTaiKhoan.DataPropertyName = "LoaiTaiKhoan";
+            this.LoaiTaiKhoan.HeaderText = "Loại Tài Khoản";
+            this.LoaiTaiKhoan.Name = "LoaiTaiKhoan";
+            this.LoaiTaiKhoan.ReadOnly = true;
             // 
             // btnXoa
             // 
@@ -340,60 +394,29 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Tài khoản:";
             // 
-            // MaCanBoGiaoVien
+            // btnTim
             // 
-            this.MaCanBoGiaoVien.DataPropertyName = "MaCanBoGiaoVien";
-            this.MaCanBoGiaoVien.HeaderText = "Mã";
-            this.MaCanBoGiaoVien.Name = "MaCanBoGiaoVien";
-            this.MaCanBoGiaoVien.ReadOnly = true;
+            this.btnTim.Location = new System.Drawing.Point(582, 19);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(77, 28);
+            this.btnTim.TabIndex = 10;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
             // 
-            // HoTen
+            // txtTim
             // 
-            this.HoTen.DataPropertyName = "HoTen";
-            this.HoTen.HeaderText = "Họ tên";
-            this.HoTen.Name = "HoTen";
-            this.HoTen.ReadOnly = true;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            // 
-            // SoDienThoai
-            // 
-            this.SoDienThoai.DataPropertyName = "SoDienThoai";
-            this.SoDienThoai.HeaderText = "Số điện thoại";
-            this.SoDienThoai.Name = "SoDienThoai";
-            this.SoDienThoai.ReadOnly = true;
-            // 
-            // TaiKhoan
-            // 
-            this.TaiKhoan.DataPropertyName = "TaiKhoan";
-            this.TaiKhoan.HeaderText = "Tài khoản";
-            this.TaiKhoan.Name = "TaiKhoan";
-            this.TaiKhoan.ReadOnly = true;
-            // 
-            // MatKhau
-            // 
-            this.MatKhau.DataPropertyName = "MatKhau";
-            this.MatKhau.HeaderText = "Mật Khẩu";
-            this.MatKhau.Name = "MatKhau";
-            this.MatKhau.ReadOnly = true;
-            // 
-            // LoaiTaiKhoan
-            // 
-            this.LoaiTaiKhoan.DataPropertyName = "LoaiTaiKhoan";
-            this.LoaiTaiKhoan.HeaderText = "Loại Tài Khoản";
-            this.LoaiTaiKhoan.Name = "LoaiTaiKhoan";
-            this.LoaiTaiKhoan.ReadOnly = true;
+            this.txtTim.Location = new System.Drawing.Point(326, 22);
+            this.txtTim.Name = "txtTim";
+            this.txtTim.Size = new System.Drawing.Size(248, 22);
+            this.txtTim.TabIndex = 9;
             // 
             // CanBoGiaoVienGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 546);
+            this.ClientSize = new System.Drawing.Size(984, 580);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -403,6 +426,7 @@
             this.Text = "Quản lí cán bộ giáo viên";
             this.Load += new System.EventHandler(this.CanBoGiaoVienGUI_Load);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCanBoGiaoVien)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
@@ -446,5 +470,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TaiKhoan;
         private System.Windows.Forms.DataGridViewTextBoxColumn MatKhau;
         private System.Windows.Forms.DataGridViewTextBoxColumn LoaiTaiKhoan;
+        private System.Windows.Forms.Button btnTim;
+        private System.Windows.Forms.TextBox txtTim;
     }
 }

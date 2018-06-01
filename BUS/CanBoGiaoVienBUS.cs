@@ -34,6 +34,14 @@ namespace BUS
             return canBoGiaoVien;
         }
 
+        public DataTable Search(string maCanBoGiaoVien)
+        {
+            if (String.IsNullOrEmpty(maCanBoGiaoVien)) {
+                return All();
+            }
+            return canBoGiaoVienDTL.Search(maCanBoGiaoVien);
+        }
+
         public bool Insert(CanBoGiaoVien canBoGiaoVien)
         {
             return canBoGiaoVienDTL.Insert(canBoGiaoVien) > 0;

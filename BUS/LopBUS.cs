@@ -24,6 +24,14 @@ namespace BUS
             return lop;
         }
 
+        public DataTable Search(string maLop)
+        {
+            if (String.IsNullOrEmpty(maLop)) {
+                return All();
+            }
+            return lopDTL.Search(maLop);
+        }
+
         public bool Insert(Lop lop)
         {
             return lopDTL.Insert(lop) > 0;

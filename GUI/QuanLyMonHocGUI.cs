@@ -141,5 +141,10 @@ namespace GUI
             }
             QuanLyMonHocGUI_Load(sender, e);
         }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            dgvMonHoc.DataSource = monHocBUS.Search(txtTim.Text);
+        }
     }
 }

@@ -22,6 +22,13 @@ namespace BUS
             return monHoc;
         }
 
+        public DataTable Search(string maMonHoc) {
+            if (String.IsNullOrEmpty(maMonHoc)) {
+                return All();
+            }
+            return monHocDTL.Search(maMonHoc);
+        }
+
         public bool Insert(MonHoc mh) {
             return monHocDTL.Insert(mh) > 0;
         }

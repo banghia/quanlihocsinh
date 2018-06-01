@@ -168,5 +168,10 @@ namespace GUI
             BatTatLHTSX();
             XoaDuLieuForm();
         }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            dgvHSHS.DataSource = hshsBUS.Search(txtTim.Text);
+        }
     }
 }

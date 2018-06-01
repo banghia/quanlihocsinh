@@ -64,6 +64,8 @@
             this.HoTenBoMe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.txtTim = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDiemVaoTruong)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -285,7 +287,7 @@
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(992, 84);
+            this.groupBox2.Size = new System.Drawing.Size(993, 84);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
@@ -349,12 +351,15 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnTim);
+            this.groupBox3.Controls.Add(this.txtTim);
             this.groupBox3.Controls.Add(this.dgvHSHS);
-            this.groupBox3.Location = new System.Drawing.Point(20, 282);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox3.Location = new System.Drawing.Point(0, 283);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(992, 250);
+            this.groupBox3.Size = new System.Drawing.Size(1032, 310);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách học sinh";
@@ -374,12 +379,12 @@
             this.HoTenBoMe,
             this.SoDienThoai,
             this.MaLop});
-            this.dgvHSHS.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvHSHS.Location = new System.Drawing.Point(4, 19);
+            this.dgvHSHS.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvHSHS.Location = new System.Drawing.Point(4, 55);
             this.dgvHSHS.Margin = new System.Windows.Forms.Padding(4);
             this.dgvHSHS.Name = "dgvHSHS";
             this.dgvHSHS.ReadOnly = true;
-            this.dgvHSHS.Size = new System.Drawing.Size(984, 227);
+            this.dgvHSHS.Size = new System.Drawing.Size(1024, 251);
             this.dgvHSHS.TabIndex = 0;
             // 
             // MaHocSinh
@@ -445,11 +450,29 @@
             this.MaLop.Name = "MaLop";
             this.MaLop.ReadOnly = true;
             // 
+            // btnTim
+            // 
+            this.btnTim.Location = new System.Drawing.Point(606, 19);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(77, 28);
+            this.btnTim.TabIndex = 10;
+            this.btnTim.Text = "Tìm";
+            this.btnTim.UseVisualStyleBackColor = true;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            // 
+            // txtTim
+            // 
+            this.txtTim.Location = new System.Drawing.Point(350, 22);
+            this.txtTim.Name = "txtTim";
+            this.txtTim.Size = new System.Drawing.Size(248, 22);
+            this.txtTim.TabIndex = 9;
+            // 
             // QuanLyHoSoHocSinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 546);
+            this.ClientSize = new System.Drawing.Size(1032, 593);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -462,6 +485,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numDiemVaoTruong)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHSHS)).EndInit();
             this.ResumeLayout(false);
 
@@ -505,5 +529,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTenBoMe;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
+        private System.Windows.Forms.Button btnTim;
+        private System.Windows.Forms.TextBox txtTim;
     }
 }

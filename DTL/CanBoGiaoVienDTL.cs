@@ -41,6 +41,14 @@ namespace DTL
             return csdl.ExecuteQuery(cmd);
         }
 
+        public DataTable Search(string maCanBoGiaoVien)
+        {
+            string que = "select * from CanBoGiaoVien where MaCanBoGiaoVien = @MaCanBoGiaoVien";
+            SqlCommand cmd = new SqlCommand(que);
+            cmd.Parameters.AddWithValue("@MaCanBoGiaoVien", maCanBoGiaoVien);
+            return csdl.ExecuteQuery(cmd);
+        }
+
         public DataTable GetAccount(string taiKhoan, string matKhau)
         {
             string que = "select * from CanBoGiaoVien where TaiKhoan = @TaiKhoan and MatKhau = @MatKhau";

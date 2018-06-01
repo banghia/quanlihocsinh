@@ -38,9 +38,10 @@
             // 
             // btnThongKe
             // 
-            this.btnThongKe.Location = new System.Drawing.Point(379, 25);
+            this.btnThongKe.Location = new System.Drawing.Point(662, 31);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(75, 23);
+            this.btnThongKe.Size = new System.Drawing.Size(100, 28);
             this.btnThongKe.TabIndex = 2;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.UseVisualStyleBackColor = true;
@@ -50,9 +51,11 @@
             this.groupBox1.Controls.Add(this.btnThongKe);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtTenLop);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(16, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(559, 64);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(953, 79);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin giáo viên";
@@ -60,35 +63,40 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 31);
+            this.label1.Location = new System.Drawing.Point(191, 37);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.Size = new System.Drawing.Size(60, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tên lớp:";
             // 
             // txtTenLop
             // 
-            this.txtTenLop.Location = new System.Drawing.Point(122, 28);
+            this.txtTenLop.Location = new System.Drawing.Point(320, 34);
+            this.txtTenLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(222, 20);
+            this.txtTenLop.Size = new System.Drawing.Size(295, 22);
             this.txtTenLop.TabIndex = 0;
             // 
             // rpvTTGiaoVien
             // 
             this.rpvTTGiaoVien.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.rpvTTGiaoVien.Location = new System.Drawing.Point(0, 94);
+            this.rpvTTGiaoVien.Location = new System.Drawing.Point(0, 102);
+            this.rpvTTGiaoVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rpvTTGiaoVien.Name = "rpvTTGiaoVien";
-            this.rpvTTGiaoVien.Size = new System.Drawing.Size(583, 342);
+            this.rpvTTGiaoVien.Size = new System.Drawing.Size(982, 501);
             this.rpvTTGiaoVien.TabIndex = 3;
             // 
             // DanhSachGV1Lop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(583, 436);
+            this.ClientSize = new System.Drawing.Size(982, 603);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.rpvTTGiaoVien);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DanhSachGV1Lop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh Sách GV 1 lớp";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
