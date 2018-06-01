@@ -13,7 +13,13 @@ namespace GUI
     public partial class MainGUI : Form
     {
 
-        CanBoGiaoVien user;
+        private CanBoGiaoVien user;
+
+        public CanBoGiaoVien User
+        {
+            get { return user; }
+            set { user = value; }
+        }
 
         public MainGUI(CanBoGiaoVien user)
         {

@@ -19,3 +19,10 @@ C:\Users\Nghia\Desktop\BTLC\abc\DTL\bin\Debug\DTO.pdb
 C:\Users\Nghia\Desktop\BTLC\abc\DTL\obj\Debug\DTL.csprojResolveAssemblyReference.cache
 C:\Users\Nghia\Desktop\BTLC\abc\DTL\obj\Debug\DTL.dll
 C:\Users\Nghia\Desktop\BTLC\abc\DTL\obj\Debug\DTL.pdb
+C:\Users\Nghia\Desktop\BTLC\csharp\DTL\bin\Debug\DTL.dll
+C:\Users\Nghia\Desktop\BTLC\csharp\DTL\bin\Debug\DTL.pdb
+C:\Users\Nghia\Desktop\BTLC\csharp\DTL\bin\Debug\DTO.dll
+C:\Users\Nghia\Desktop\BTLC\csharp\DTL\bin\Debug\DTO.pdb
+C:\Users\Nghia\Desktop\BTLC\csharp\DTL\obj\Debug\DTL.csprojResolveAssemblyReference.cache
+C:\Users\Nghia\Desktop\BTLC\csharp\DTL\obj\Debug\DTL.dll
+C:\Users\Nghia\Desktop\BTLC\csharp\DTL\obj\Debug\DTL.pdb

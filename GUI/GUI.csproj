@@ -87,6 +87,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLHocSinhDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLHocSinhDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyHoSoHocSinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +152,7 @@
     <EmbeddedResource Include="QuanLyMonHocGUI.resx">
       <DependentUpon>QuanLyMonHocGUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="ThongTinGUI.resx">
       <DependentUpon>ThongTinGUI.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +168,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLHocSinhDataSet.xsc">
+      <DependentUpon>QLHocSinhDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLHocSinhDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLHocSinhDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLHocSinhDataSet.xss">
+      <DependentUpon>QLHocSinhDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BUS\BUS.csproj">

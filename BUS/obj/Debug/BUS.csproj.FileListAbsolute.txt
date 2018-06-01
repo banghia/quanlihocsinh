@@ -25,3 +25,12 @@ C:\Users\Nghia\Desktop\BTLC\abc\BUS\bin\Debug\DTO.pdb
 C:\Users\Nghia\Desktop\BTLC\abc\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 C:\Users\Nghia\Desktop\BTLC\abc\BUS\obj\Debug\BUS.dll
 C:\Users\Nghia\Desktop\BTLC\abc\BUS\obj\Debug\BUS.pdb
+C:\Users\Nghia\Desktop\BTLC\csharp\BUS\bin\Debug\BUS.dll
+C:\Users\Nghia\Desktop\BTLC\csharp\BUS\bin\Debug\BUS.pdb
+C:\Users\Nghia\Desktop\BTLC\csharp\BUS\bin\Debug\DTL.dll
+C:\Users\Nghia\Desktop\BTLC\csharp\BUS\bin\Debug\DTO.dll
+C:\Users\Nghia\Desktop\BTLC\csharp\BUS\bin\Debug\DTL.pdb
+C:\Users\Nghia\Desktop\BTLC\csharp\BUS\bin\Debug\DTO.pdb
+C:\Users\Nghia\Desktop\BTLC\csharp\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+C:\Users\Nghia\Desktop\BTLC\csharp\BUS\obj\Debug\BUS.dll
+C:\Users\Nghia\Desktop\BTLC\csharp\BUS\obj\Debug\BUS.pdb
