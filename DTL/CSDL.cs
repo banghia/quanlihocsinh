@@ -10,7 +10,7 @@ namespace DTL
 {
     public class CSDL
     {
-        public string chuoiKetNoi = ConfigurationManager.ConnectionStrings["chuoiKetNoi"].ConnectionString;
+        public string chuoiKetNoi = ConfigurationManager.ConnectionStrings["GUI.Properties.Settings.QLHocSinhConnectionString"].ConnectionString;
 
         //Hàm thực thi câu lệnh truy vấn select trả về DataTable.
         public DataTable ExecuteQuery(SqlCommand cmd) {

@@ -64,5 +64,16 @@ namespace GUI
 
             PhanCongGiangDayGUI_Load(sender, e);
         }
+
+        private void btnXem_Click(object sender, EventArgs e)
+        {
+            string maLop = null;
+            if (chkLop.Checked) maLop = cmbTenLop.SelectedValue.ToString();
+            string maMonHoc = null;
+            if (chkMonHoc.Checked) maMonHoc = cmbMonHoc.SelectedValue.ToString();
+            string maGiaoVien = null;
+            if (chkGiaoVien.Checked) maGiaoVien = cmbTenGV.SelectedValue.ToString();
+            dgvDSPhanCongGiangDay.DataSource = pcgdBUS.Search(maLop, maMonHoc, maGiaoVien);
+        }
     }
 }

@@ -73,6 +73,11 @@
     <Compile Include="DanhSachHocSinh.Designer.cs">
       <DependentUpon>DanhSachHocSinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="dsGiaoVienLopDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGiaoVienLopDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MainGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,11 +158,23 @@
       <DependentUpon>QuanLyMonHocGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
     <EmbeddedResource Include="ThongTinGUI.resx">
       <DependentUpon>ThongTinGUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="dsGiaoVienLopDataSet.xsc">
+      <DependentUpon>dsGiaoVienLopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dsGiaoVienLopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGiaoVienLopDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dsGiaoVienLopDataSet.xss">
+      <DependentUpon>dsGiaoVienLopDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

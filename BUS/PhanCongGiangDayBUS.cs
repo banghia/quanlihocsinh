@@ -16,6 +16,11 @@ namespace BUS
             return pcgdDTL.All();
         }
 
+        public DataTable Search(string maLop, string maMonHoc, string maGiaoVien)
+        {
+            return pcgdDTL.Search(maLop, maMonHoc, maGiaoVien);
+        }
+
         public bool Insert(PhanCongGiangDay pcgd) {
             return pcgdDTL.Insert(pcgd) > 0;
         }

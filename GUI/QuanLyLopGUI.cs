@@ -24,6 +24,7 @@ namespace GUI
 
         private void QuanLyLopGUI_Load(object sender, EventArgs e)
         {
+            //Load dữ liệu lớp lên cmb.
             dgvDSLop.DataSource = lopBus.All();
             cmbGVCN.DataSource = cbgvBUS.AllGiaoVien();
             cmbGVCN.DisplayMember = "HoTen";
@@ -31,6 +32,7 @@ namespace GUI
             XoaDuLieuForm();
         }
 
+        //Bật tắt các nut lưu hủy thêm sửa xóa/
         private void BatTatLHTSX() {
             btnLuu.Enabled = !btnLuu.Enabled;
             btnHuy.Enabled = !btnHuy.Enabled;
@@ -39,6 +41,7 @@ namespace GUI
             btnXoa.Enabled = !btnXoa.Enabled;
         }
 
+        //Xóa dữ liệu trên form.
         private void XoaDuLieuForm() {
             txtMaLop.Clear();
             txtTenLop.Clear();
@@ -82,10 +85,13 @@ namespace GUI
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            //Kiểm tra mã có để trống hay không.
             if (String.IsNullOrEmpty(txtMaLop.Text)) {
                 MessageBox.Show("Mã lớp không được để trống.");
                 return;
             }
+
+            //Kiểm tra mã lớp đã tồn tại hay chưa.
             string maLop = txtMaLop.Text;
             if (!lopBus.Exist(maLop)) {
                 MessageBox.Show("Mã lớp không tồn tại.");
@@ -102,11 +108,13 @@ namespace GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            //Kiểm tra mã lớp có để trống hay không.
             if (String.IsNullOrEmpty(txtMaLop.Text))
             {
                 MessageBox.Show("Mã lớp không được để trống.");
                 return;
             }
+            //Kiểm tra mã lớp đã tồn tại hay chưa.
             string maLop = txtMaLop.Text;
             if (!lopBus.Exist(maLop))
             {

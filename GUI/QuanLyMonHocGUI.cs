@@ -50,6 +50,9 @@ namespace GUI
             }
             //Tải lại dữ liệu.
             QuanLyMonHocGUI_Load(sender, e);
+            txtMaMonHoc.Clear();
+            txtTenMonHoc.Clear();
+            numSoTiet.Value = numSoTiet.Minimum;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -144,6 +147,7 @@ namespace GUI
 
         private void btnTim_Click(object sender, EventArgs e)
         {
+            //Tìm kiếm theo mã môn học.
             dgvMonHoc.DataSource = monHocBUS.Search(txtTim.Text);
         }
     }

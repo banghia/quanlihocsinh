@@ -29,6 +29,30 @@ namespace DTL
             return csdl.ExecuteQuery(cmd);
         }
 
+        public DataTable Search(string maLop, string maMonHoc, string maGiaoVien)
+        {
+            string query = "select * from PhanCongGiangDay";
+            string tmp = " where ";
+            if (!String.IsNullOrEmpty(maLop)) {
+                query += tmp + " MaLop = @MaLop ";
+                tmp = " and ";
+            }
+            if (!String.IsNullOrEmpty(maMonHoc))
+            {
+                query += tmp + " MaMon = @MaMonHoc ";
+                tmp = " and ";
+            }
+            if (!String.IsNullOrEmpty(maGiaoVien))
+            {
+                query += tmp + " MaCanBoGiaoVien = @MaCanBoGiaoVien ";
+            }
+            SqlCommand cmd = new SqlCommand(query);
+            if (!String.IsNullOrEmpty(maLop)) cmd.Parameters.AddWithValue("@MaLop", maLop);
+            if (!String.IsNullOrEmpty(maMonHoc)) cmd.Parameters.AddWithValue("@MaMonHoc", maMonHoc);
+            if (!String.IsNullOrEmpty(maGiaoVien)) cmd.Parameters.AddWithValue("@MaCanBoGiaoVien", maGiaoVien);
+            return csdl.ExecuteQuery(cmd);
+        }
+
         public int Insert(PhanCongGiangDay pcgd)
         {
             string query = "insert into PhanCongGiangDay values(@MaLop, @MaMon, @MaCanBoGiaoVien, @NgayPhanCong)";

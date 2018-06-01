@@ -31,9 +31,10 @@ namespace GUI
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             this.HoSoHocSinhTableAdapter.Fill(this.QLHocSinhDataSet.HoSoHocSinh, cmbLop.SelectedValue.ToString());
+            MainGUI mainForm = (MainGUI)this.MdiParent;
             this.rpvTTHocSinh.LocalReport.SetParameters(new ReportParameter[]{
                 new ReportParameter("TenLop", cmbLop.Text),
-                new ReportParameter("NguoiLap", "Coo")
+                new ReportParameter("NguoiLap", mainForm.User.HoTen)
             });
             this.rpvTTHocSinh.RefreshReport();
         }

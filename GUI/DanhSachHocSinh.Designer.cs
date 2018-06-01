@@ -30,18 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.HoSoHocSinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.QLHocSinhDataSet = new GUI.QLHocSinhDataSet();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbLop = new System.Windows.Forms.ComboBox();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.rpvTTHocSinh = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.cmbLop = new System.Windows.Forms.ComboBox();
-            this.HoSoHocSinhBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.QLHocSinhDataSet = new GUI.QLHocSinhDataSet();
             this.HoSoHocSinhTableAdapter = new GUI.QLHocSinhDataSetTableAdapters.HoSoHocSinhTableAdapter();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HoSoHocSinhBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.QLHocSinhDataSet)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // HoSoHocSinhBindingSource
+            // 
+            this.HoSoHocSinhBindingSource.DataMember = "HoSoHocSinh";
+            this.HoSoHocSinhBindingSource.DataSource = this.QLHocSinhDataSet;
+            // 
+            // QLHocSinhDataSet
+            // 
+            this.QLHocSinhDataSet.DataSetName = "QLHocSinhDataSet";
+            this.QLHocSinhDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox1
             // 
@@ -56,6 +66,15 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin học sinh";
+            // 
+            // cmbLop
+            // 
+            this.cmbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLop.FormattingEnabled = true;
+            this.cmbLop.Location = new System.Drawing.Point(289, 34);
+            this.cmbLop.Name = "cmbLop";
+            this.cmbLop.Size = new System.Drawing.Size(334, 24);
+            this.cmbLop.TabIndex = 3;
             // 
             // btnThongKe
             // 
@@ -93,24 +112,6 @@
             this.rpvTTHocSinh.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             this.rpvTTHocSinh.ZoomPercent = 90;
             // 
-            // cmbLop
-            // 
-            this.cmbLop.FormattingEnabled = true;
-            this.cmbLop.Location = new System.Drawing.Point(289, 34);
-            this.cmbLop.Name = "cmbLop";
-            this.cmbLop.Size = new System.Drawing.Size(334, 24);
-            this.cmbLop.TabIndex = 3;
-            // 
-            // HoSoHocSinhBindingSource
-            // 
-            this.HoSoHocSinhBindingSource.DataMember = "HoSoHocSinh";
-            this.HoSoHocSinhBindingSource.DataSource = this.QLHocSinhDataSet;
-            // 
-            // QLHocSinhDataSet
-            // 
-            this.QLHocSinhDataSet.DataSetName = "QLHocSinhDataSet";
-            this.QLHocSinhDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // HoSoHocSinhTableAdapter
             // 
             this.HoSoHocSinhTableAdapter.ClearBeforeFill = true;
@@ -127,10 +128,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách học sinh";
             this.Load += new System.EventHandler(this.DanhSachHocSinh_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HoSoHocSinhBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.QLHocSinhDataSet)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
