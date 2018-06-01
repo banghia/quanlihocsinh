@@ -55,6 +55,15 @@
             this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvHSHS = new System.Windows.Forms.DataGridView();
+            this.MaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemVaoTruong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTenBoMe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numDiemVaoTruong)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -355,6 +364,16 @@
             this.dgvHSHS.AllowUserToAddRows = false;
             this.dgvHSHS.AllowUserToDeleteRows = false;
             this.dgvHSHS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHSHS.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaHocSinh,
+            this.HoTen,
+            this.NgaySinh,
+            this.GioiTinh,
+            this.DiaChi,
+            this.DiemVaoTruong,
+            this.HoTenBoMe,
+            this.SoDienThoai,
+            this.MaLop});
             this.dgvHSHS.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvHSHS.Location = new System.Drawing.Point(4, 19);
             this.dgvHSHS.Margin = new System.Windows.Forms.Padding(4);
@@ -362,6 +381,69 @@
             this.dgvHSHS.ReadOnly = true;
             this.dgvHSHS.Size = new System.Drawing.Size(984, 227);
             this.dgvHSHS.TabIndex = 0;
+            // 
+            // MaHocSinh
+            // 
+            this.MaHocSinh.DataPropertyName = "MaHocSinh";
+            this.MaHocSinh.HeaderText = "Mã học sinh";
+            this.MaHocSinh.Name = "MaHocSinh";
+            this.MaHocSinh.ReadOnly = true;
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "HoTen";
+            this.HoTen.HeaderText = "Họ tên";
+            this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.HeaderText = "Ngày sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.ReadOnly = true;
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
+            this.GioiTinh.HeaderText = "Giới tính";
+            this.GioiTinh.Name = "GioiTinh";
+            this.GioiTinh.ReadOnly = true;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // DiemVaoTruong
+            // 
+            this.DiemVaoTruong.DataPropertyName = "DiemVaoTruong";
+            this.DiemVaoTruong.HeaderText = "Điểm vào trường";
+            this.DiemVaoTruong.Name = "DiemVaoTruong";
+            this.DiemVaoTruong.ReadOnly = true;
+            // 
+            // HoTenBoMe
+            // 
+            this.HoTenBoMe.DataPropertyName = "HoTenBoMe";
+            this.HoTenBoMe.HeaderText = "Họ tên bố mẹ";
+            this.HoTenBoMe.Name = "HoTenBoMe";
+            this.HoTenBoMe.ReadOnly = true;
+            // 
+            // SoDienThoai
+            // 
+            this.SoDienThoai.DataPropertyName = "SoDienThoai";
+            this.SoDienThoai.HeaderText = "Số điện thoại";
+            this.SoDienThoai.Name = "SoDienThoai";
+            this.SoDienThoai.ReadOnly = true;
+            // 
+            // MaLop
+            // 
+            this.MaLop.DataPropertyName = "MaLop";
+            this.MaLop.HeaderText = "Mã lớp";
+            this.MaLop.Name = "MaLop";
+            this.MaLop.ReadOnly = true;
             // 
             // QuanLyHoSoHocSinh
             // 
@@ -414,5 +496,14 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvHSHS;
         private System.Windows.Forms.NumericUpDown numDiemVaoTruong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHocSinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiemVaoTruong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoTenBoMe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoDienThoai;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLop;
     }
 }

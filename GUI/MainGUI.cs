@@ -116,5 +116,19 @@ namespace GUI
             thongTin.MdiParent = this;
             thongTin.Show();
         }
+
+        private void đóngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild != null) {
+                this.ActiveMdiChild.Close();
+            }
+        }
+
+        private void đóngTấtCảToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach(var child in this.MdiChildren){
+                child.Close();
+            }
+        }
     }
 }
