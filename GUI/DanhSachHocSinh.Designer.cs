@@ -65,7 +65,7 @@
             this.groupBox1.Size = new System.Drawing.Size(953, 79);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin học sinh";
+            this.groupBox1.Text = "Thống kê học sinh theo lớp";
             // 
             // cmbLop
             // 

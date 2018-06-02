@@ -120,3 +120,6 @@ C:\Users\Nghia\Desktop\BTLC\csharpa\GUI\obj\x86\Debug\GUI.ThongTinGUI.resources
 C:\Users\Nghia\Desktop\BTLC\csharpa\GUI\obj\x86\Debug\GUI.csproj.GenerateResource.Cache
 C:\Users\Nghia\Desktop\BTLC\csharpa\GUI\obj\x86\Debug\RdlCompile.cache
 C:\Users\Nghia\Desktop\BTLC\csharpa\GUI\obj\x86\Debug\RdlCompile.compiled
+E:\quanlihocsinh\GUI\bin\Debug\GUI.exe.config
+E:\quanlihocsinh\GUI\obj\x86\Debug\GUI.exe
+E:\quanlihocsinh\GUI\obj\x86\Debug\GUI.pdb

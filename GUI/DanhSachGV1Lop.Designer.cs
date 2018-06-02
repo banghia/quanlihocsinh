@@ -29,19 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.dsGiaoVienLopBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsGiaoVienLopDataSet = new GUI.dsGiaoVienLopDataSet();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbLop = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dsGiaoVienLopDataSet = new GUI.dsGiaoVienLopDataSet();
-            this.dsGiaoVienLopBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsGiaoVienLopTableAdapter = new GUI.dsGiaoVienLopDataSetTableAdapters.dsGiaoVienLopTableAdapter();
-            this.cmbLop = new System.Windows.Forms.ComboBox();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsGiaoVienLopDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsGiaoVienLopBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsGiaoVienLopDataSet)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // dsGiaoVienLopBindingSource
+            // 
+            this.dsGiaoVienLopBindingSource.DataMember = "dsGiaoVienLop";
+            this.dsGiaoVienLopBindingSource.DataSource = this.dsGiaoVienLopDataSet;
+            // 
+            // dsGiaoVienLopDataSet
+            // 
+            this.dsGiaoVienLopDataSet.DataSetName = "dsGiaoVienLopDataSet";
+            this.dsGiaoVienLopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // btnThongKe
             // 
@@ -66,7 +76,16 @@
             this.groupBox1.Size = new System.Drawing.Size(953, 79);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin giáo viên";
+            this.groupBox1.Text = "Thống kê giáo viên";
+            // 
+            // cmbLop
+            // 
+            this.cmbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLop.FormattingEnabled = true;
+            this.cmbLop.Location = new System.Drawing.Point(259, 33);
+            this.cmbLop.Name = "cmbLop";
+            this.cmbLop.Size = new System.Drawing.Size(353, 24);
+            this.cmbLop.TabIndex = 3;
             // 
             // label1
             // 
@@ -81,9 +100,9 @@
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.dsGiaoVienLopBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.dsGiaoVienLopBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "GUI.Report2.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 101);
             this.reportViewer1.Name = "reportViewer1";
@@ -91,28 +110,9 @@
             this.reportViewer1.TabIndex = 3;
             this.reportViewer1.ZoomMode = Microsoft.Reporting.WinForms.ZoomMode.PageWidth;
             // 
-            // dsGiaoVienLopDataSet
-            // 
-            this.dsGiaoVienLopDataSet.DataSetName = "dsGiaoVienLopDataSet";
-            this.dsGiaoVienLopDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dsGiaoVienLopBindingSource
-            // 
-            this.dsGiaoVienLopBindingSource.DataMember = "dsGiaoVienLop";
-            this.dsGiaoVienLopBindingSource.DataSource = this.dsGiaoVienLopDataSet;
-            // 
             // dsGiaoVienLopTableAdapter
             // 
             this.dsGiaoVienLopTableAdapter.ClearBeforeFill = true;
-            // 
-            // cmbLop
-            // 
-            this.cmbLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLop.FormattingEnabled = true;
-            this.cmbLop.Location = new System.Drawing.Point(259, 33);
-            this.cmbLop.Name = "cmbLop";
-            this.cmbLop.Size = new System.Drawing.Size(353, 24);
-            this.cmbLop.TabIndex = 3;
             // 
             // DanhSachGV1Lop
             // 
@@ -124,12 +124,12 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DanhSachGV1Lop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Danh Sách GV 1 lớp";
+            this.Text = "Danh Sách giáo viên";
             this.Load += new System.EventHandler(this.DanhSachGV1Lop_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dsGiaoVienLopBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsGiaoVienLopDataSet)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dsGiaoVienLopDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dsGiaoVienLopBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
